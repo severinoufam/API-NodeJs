@@ -10,7 +10,8 @@ const rotaPedidos = require('./routes/pedidos');
 
 //LOG (DEV)
 app.use(morgan('dev'));
-
+//DIRETÓRIO DE IMG PUBLIC
+app.use('/uploads', express.static('uploads'));
 //Json
 app.use(bodyParser.urlencoded({extended: false})); //apenas dados simples.
 app.use(bodyParser.json()); //json de entrada no body.
